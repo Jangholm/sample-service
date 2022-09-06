@@ -37,7 +37,7 @@ jobs:
       - name: Push image
         run: docker push $REGISTRY_URL/$PROJECT_ID/$IMAGE_NAME:$GITHUB_SHA
 
-      # Inform Humanitec about new image
+      # Inform Humanitec about new imag
       - name: Inform Humanitec
         run: |-
           echo Branch:$GITHUB_REF_NAME, Commit:$GITHUB_SHA, Image:$REGISTRY_URL/$PROJECT_ID/$IMAGE_NAME:$GITHUB_SHA, Tags:$GITHUB_SHA &&\
